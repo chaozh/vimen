@@ -1,7 +1,7 @@
 #!bin/bash
 WORKPATH=`pwd`
 if [ ! -f ~/.vimrc ]; then
-    cp .vimrc ~/
+    cp vimrc ~/.vimrc
 #ln -s $WORKPATH/.vimrc ~/.vimrc
 else
     echo "vimrc already exists"
@@ -27,3 +27,7 @@ EOF
 else
     echo "git path already sets!"
 fi
+
+#git related
+cd ~/.vim && git submodule update --init 
+vim -c ':BundleInstall'
