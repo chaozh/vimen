@@ -21,8 +21,12 @@ set showcmd
 set ruler
 set mouse=a
 set mousehide
+set foldenable
+set foldmethod=manual
 
 map Q gq
+map <C-a> ggVGY
+"map! <C-A> <ESC>ggVGY
 " inoremap <C-U> <C-G>u<C-U>
 
 " Searching
@@ -59,11 +63,10 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree' 
 "right tag
 Bundle 'majutsushi/tagbar'   
+" Bundle 'taglist.vim'
 "bottom line
 Bundle 'bling/vim-airline'
 " Bundle 'Lokaltog/vim-powerline'
-"right tag
-" Bundle 'taglist.vim'
 "todo list
 Bundle 'TaskList.vim'       
 Bundle 'myusuf3/numbers.vim'
@@ -76,7 +79,8 @@ filetype plugin indent on
 " :BundleClean(!)       - removal of unused bundles
 " see :h vundle for details
 "
-
+"development mode
+map <F2> :NERDTreeToggle<CR>:TagbarToggle<CR><C-w>l 
 
 " NerdTree
 map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
@@ -98,7 +102,7 @@ let g:tagbar_width = 20
 let g:tagbar_singleclick = 1
 let g:tagbar_iconchars = ['▸', '▾']
 let g:tagbar_ctags_bin='/usr/bin/ctags'
-nnoremap <leader>tb :TagbarToggle<CR>
+nnoremap <C-t> :TagbarToggle<CR>
 
 " numbers
 nnoremap <F3> :NumbersToggle<CR>
@@ -108,5 +112,10 @@ nnoremap <F3> :NumbersToggle<CR>
 " let g:Powerline_symbols = 'unicode'
 " let g:Powerline_colorscheme = 'solarized256'
 
+" airline setting
+let g:airline#extensions#whitespace        = 0 "close empty char check
+"let g:airline_powerline_fonts              = 1
+let g:airline#extensions#tabline#enabled   = 0 "show top tab
+let g:airline_theme                        = 'molokai'
 " tasklist
 nmap <silent> <leader>tl <Plug>TaskList
