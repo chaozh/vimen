@@ -13,7 +13,8 @@ cd ~/.vim && sh install.sh
 
 ##Shortcuts
 `F3`: toggle line number 
-`<leader>tb`: toggle function tag list
+`F1`: enter dev mode (toggle both file explore & function tag list)
+`<ctrl>t`: toggle function tag list
 `<ctrl>e`: toggle file explore
 `<leader>tl`: toggle task list
 
