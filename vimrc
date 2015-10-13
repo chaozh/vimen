@@ -13,6 +13,7 @@ set cindent "auto indent for c files
 set autoindent
 set smartindent
 set expandtab "replace tab with spaces
+set backspace=indent,eol,start 
 
 set nowrap "wrap long lines
 set matchpairs=(:),{:},[:],<:>
@@ -67,7 +68,7 @@ Bundle 'bling/vim-airline'
 "todo list
 Bundle 'TaskList.vim'       
 Bundle 'myusuf3/numbers.vim'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 filetype plugin indent on
 "
 " :BundleList           - list configured bundles
