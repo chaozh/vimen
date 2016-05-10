@@ -67,6 +67,7 @@ Bundle 'majutsushi/tagbar'
 " Bundle 'taglist.vim'
 "bottom line
 Bundle 'bling/vim-airline'
+BUndle 'vim-airline/vim-airline-themes'
 " Bundle 'Lokaltog/vim-powerline'
 "todo list
 Bundle 'TaskList.vim'       
